@@ -1,0 +1,44 @@
+.card-login {
+	margin-top: 10vh;
+	border-radius: 10px;
+	border: none;
+}
+
+label {
+	font-size: .96em;
+}
+
+.text-field {
+	display: flex;
+	border: none;
+	border-bottom: solid #eee 2px;
+	transition: 0.5s;
+}
+
+.text-field:focus {
+	outline: none;
+	background-color: none;
+	border-bottom: solid #007bff 2px;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+div h2 {
+	font-family: "Fira Sans", sans-serif;
+}
+
+.login-button {
+	background-color: #007bff;
+	border: none;
+	height: 40px;
+	border-radius: 6px;
+	font-weight: thin;
+	color: white;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s;
+}

@@ -1,0 +1,157 @@
+/* Variabel */
+:root {
+	--primary-color: #3282b8;
+	--dark-primary-color: #2b74a6;
+}
+
+/* Loader */
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2000;
+}
+
+.loader {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 4px solid var(--primary-color);
+	animation: loader 2s infinite ease;
+	z-index: 2000;
+}
+
+.loader-inner {
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+	background-color: var(--primary-color);
+	animation: loader-inner 2s infinite ease-in;
+	z-index: 2000;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	75% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loader-inner {
+	0% {
+		height: 0%;
+	}
+	25% {
+		height: 0%;
+	}
+	50% {
+		height: 100%;
+	}
+	75% {
+		height: 100%;
+	}
+	100% {
+		height: 0%;
+	}
+}
+
+/* Better Bootstrap Hover */
+.kategori.dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+.cart.cart-md.dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+.cart.cart-md.dropdown {
+	display: none;
+}
+
+/* ------- Cart Button Mobile ------- */
+@media (max-width: 576px) {
+	.cart.dropdown.mobile {
+		right: 40px !important;
+		position: fixed !important;
+		top: 20px;
+	}
+}
+
+@media (min-width: 577px) {
+	.cart.dropdown.mobile {
+		margin-left: 430px !important;
+		position: fixed !important;
+		top: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.cart.dropdown.mobile {
+		margin-left: 600px !important;
+		position: fixed !important;
+		top: 20px;
+	}
+}
+
+/* ------- Animated Dropdown ------- */
+@media (min-width: 992px) {
+	.animate {
+		animation-duration: 0.3s;
+		-webkit-animation-duration: 0.3s;
+		animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0rem);
+		opacity: 1;
+	}
+	0% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes slideIn {
+	0% {
+		-webkit-transform: transform;
+		-webkit-opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		-webkit-opacity: 1;
+	}
+	0% {
+		-webkit-transform: translateY(1rem);
+		-webkit-opacity: 0;
+	}
+}
+
+.slideIn {
+	-webkit-animation-name: slideIn;
+	animation-name: slideIn;
+}

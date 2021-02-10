@@ -1,0 +1,409 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+footer {
+  min-height: 240px;
+  font-size: 0.94em;
+}
+
+footer p,
+footer a {
+  color: #2e2e2e;
+  line-height: 2.2em;
+}
+
+footer i {
+  color: white;
+}
+
+footer h5 {
+  color: #3282b8;
+  font-weight: 500;
+}
+
+footer h6 {
+  color: #3282b8;
+  font-weight: 600;
+}
+
+#akun-dropdown:active {
+  color: white !important;
+}
+
+#breadcrumb {
+  margin-left: -12px;
+  margin-top: 24px;
+}
+
+.akun,
+.beli,
+.keranjang {
+  display: none;
+}
+
+.beli #cart,
+.beli #beli {
+  width: 180px;
+}
+
+.breadcrumb {
+  font-size: 0.8em;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.brand {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.btn-login.btn-outline-secondary {
+  padding-left: 16px;
+  padding-right: 16px;
+  border: none;
+  background-color: #3282b8;
+  color: white !important;
+  display: none;
+}
+
+.btn-primary#cart,
+.btn-success {
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.btn-special {
+  -webkit-transition: 0.4s !important;
+  transition: 0.4s !important;
+  background-color: #f2f2f2;
+  border: none;
+  color: #2b74a6;
+}
+
+.btn-special:hover {
+  -webkit-box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3) !important;
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3) !important;
+  background-color: #3282b8;
+}
+
+.btn-special:active {
+  background-color: #2b74a6 !important;
+}
+
+.btn-primary {
+  background-color: #3282b8;
+}
+
+.btn-primary:hover {
+  background-color: #2b74a6;
+}
+
+.cart {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.cart-div {
+  max-width: 400px;
+  min-width: 260px;
+}
+
+.div-produk {
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  font-size: 0.92rem;
+  border-radius: 8px;
+}
+
+.dropdown-item:active {
+  background-color: #3282b8;
+}
+
+.dropdown-menu {
+  -webkit-box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 12px;
+  border: none;
+  padding: 4px 10px;
+}
+
+.fa-facebook-square,
+.fa-instagram,
+.fa-telegram,
+.fa-whatsapp,
+.fa-youtube {
+  color: grey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.fa-facebook-square:hover {
+  color: #2871cf;
+}
+
+.fa-instagram:hover {
+  color: #da33b6;
+}
+
+.fa-telegram:hover {
+  color: #2871cf;
+}
+
+.fa-whatsapp:hover {
+  color: #21a348;
+}
+
+.fa-youtube:hover {
+  color: red;
+}
+
+.footer,
+.terbaru {
+  background-color: #3282b8;
+}
+
+.footer-c {
+  background-color: #2b74a6;
+}
+
+.harga {
+  font-weight: bold;
+  color: orangered;
+}
+
+.link-primary {
+  color: #3282b8 !important;
+}
+
+.link-primary:hover {
+  color: orangered !important;
+}
+
+.marketplace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 34px;
+  padding-top: 16px;
+}
+
+.marketplace a img {
+  height: 30px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  margin: 10px 20px;
+}
+
+.marketplace a img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.nama-produk {
+  font-size: 0.9em;
+}
+
+.nav-hover {
+  padding: 0 0;
+  border-radius: 6px;
+}
+
+.nav-hover:hover {
+  background-color: whitesmoke;
+}
+
+.nav-profil {
+  max-width: 150px;
+  display: none;
+}
+
+.nav-profil a img {
+  width: 22px;
+  height: 22px;
+  margin-left: -12px;
+}
+
+.navbar.navbar-main {
+  background-color: white;
+  z-index: 10;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+}
+
+.nav-truncate {
+  max-width: 170px;
+}
+
+.no-outline {
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.notification {
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+
+img.no-cart,
+img.no-order {
+  width: 60%;
+}
+
+.profile-pic {
+  position: absolute;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 2px solid;
+  width: 180px;
+  height: 180px;
+}
+
+.profile-wrapper {
+  margin: 20px auto !important;
+}
+
+#scroll-top {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background-color: #3282b8;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+#scroll-top:hover {
+  background-color: #2b74a6;
+}
+
+.searchbar,
+.detail-keranjang {
+  border: none;
+}
+
+.searchbar {
+  background-color: rgba(230, 230, 230, 0.4);
+}
+
+.searchbox {
+  margin: 12px 0;
+}
+
+.soc-med {
+  font-size: 1.4rem;
+  margin-top: -20px;
+}
+
+.wrapper {
+  border: none;
+}
+
+@media (min-width: 992px) {
+  footer {
+    font-size: 0.92em;
+    line-height: 1.8em;
+  }
+  .btn-login.btn-outline-secondary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .cart.dropdown.mobile {
+    display: none;
+  }
+  .cart.cart-md.dropdown {
+    display: inline;
+  }
+  .divider {
+    display: none;
+  }
+  .searchbox {
+    margin: 0 20px;
+  }
+  .akun-mobile,
+  .keranjang-mobile a {
+    display: none;
+  }
+  .akun,
+  .keranjang,
+  .nav-profil {
+    display: inline;
+  }
+  img.no-cart {
+    width: 26%;
+  }
+  img.no-order {
+    width: 46%;
+  }
+  .breadcrumb {
+    font-size: 1em;
+  }
+  .nama-terbaru {
+    font-size: 1em !important;
+  }
+  .nav-hover {
+    padding: 0 4px !important;
+    border-radius: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .beli {
+    display: inline;
+  }
+  .beli-mobile {
+    display: none;
+  }
+  .beli #cart,
+  .beli #beli {
+    width: 180px;
+    margin-bottom: 12px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
