@@ -18,19 +18,19 @@
                     <h5 class="brand"><?= $info['judul_web'] ?></h5>
                     <p><?= $info['deskripsi_web'] ?></p>
                     <div class="soc-med mb-3">
-                        <a href="">
+                        <a href="https://www.facebook.com" target="_blank">
                             <i class="fab fa-facebook-square mr-3"></i>
                         </a>
-                        <a href="">
+                        <a href="https://www.instagram.com/skb.salatiga/" target="_blank">
                             <i class="fab fa-instagram mr-3"></i>
                         </a>
                         <a href="">
                             <i class="fab fa-telegram mr-3"></i>
                         </a>
-                        <a href="">
+                        <a href="https://wa.me/<?= $info['wa_web'] ?>" target="_blank">
                             <i class="fab fa-whatsapp mr-3"></i>
                         </a>
-                        <a href="">
+                        <a href="https://www.youtube.com/channel/UCVbk0cH7oAm5YuNS8DYUBcw" target="_blank">
                             <i class="fab fa-youtube mr-3"></i>
                         </a>
                     </div>
@@ -46,21 +46,21 @@
                         <div class="col-6 col-md-6 col-lg-3 my-2">
                             <h6>INFORMASI</h6>
                             <a href="">Cara Berbelanja</a><br>
-                            <a href="">Cara Checkout</a><br>
                             <a href="">Pembatalan Pesanan</a><br>
                             <a href="http://wa.me/<?= $info['wa_web'] ?>" target="_blank">Customer Service</a><br>
-                            <a href="">Kebijakan dan Privasi</a>
                             <a href="">Syarat dan Ketentuan</a>
                         </div>
                         <div class="col-12 col-md-12 col-lg-6 my-2">
-                            <h6>BERLANGGANAN</h6>
+                            <h6>TENTANG KAMI</h6>
+                            <p>Jangan lupa kunjungi website resmi kami di <a class="font-weight-bold" href="http://skb.salatiga.go.id" target="_blank"><u>skb.salatiga.go.id</u></a>, untuk mengetahui informasi tentang kami secara up-to-date</p>
+                            <!-- <h6>BERLANGGANAN</h6>
                             <p>Dapatkan berita mengenai berbagai macam penawaran menarik dari <?= $info['judul_web'] ?></p>
                             <div class="input-group my-3">
                                 <input type="email" class="form-control" placeholder="Alamat email kamu">
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="button" id="button-addon2"><i class="fas fa-paper-plane"></i></button>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
