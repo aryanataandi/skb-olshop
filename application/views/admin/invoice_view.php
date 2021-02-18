@@ -29,11 +29,33 @@
 				</div>
 				<div class="col-6 col-md-3 my-1">
 					<select class="form-control" name="status" id="status" required>
-						<option value="">...</option>
-						<option value="Dibatalkan">Dibatalkan</option>
-						<option value="Diproses">Diproses</option>
-						<option value="Dikirim">Dikirim</option>
-						<option value="Selesai">Selesai</option>
+						<?php if ($invoice['status'] == "Selesai") { ?>
+							<option value="">Selesai</option>
+							<option value="Dibatalkan">Dibatalkan</option>
+							<option value="Diproses">Diproses</option>
+							<option value="Dikirim">Dikirim</option>
+						<?php } elseif ($invoice['status'] == "Dibatalkan") { ?>
+							<option value="">Dibatalkan</option>
+							<option value="Diproses">Diproses</option>
+							<option value="Dikirim">Dikirim</option>
+							<option value="Selesai">Selesai</option>
+						<?php } elseif ($invoice['status'] == "Dikirim") { ?>
+							<option value="">Dikirim</option>
+							<option value="Dibatalkan">Dibatalkan</option>
+							<option value="Diproses">Diproses</option>
+							<option value="Selesai">Selesai</option>
+						<?php } elseif ($invoice['status'] == "Diproses") { ?>
+							<option value="">Diproses</option>
+							<option value="Dibatalkan">Dibatalkan</option>
+							<option value="Dikirim">Dikirim</option>
+							<option value="Selesai">Selesai</option>
+						<?php } else { ?>
+							<option value="">...</option>
+							<option value="Dibatalkan">Dibatalkan</option>
+							<option value="Diproses">Diproses</option>
+							<option value="Dikirim">Dikirim</option>
+							<option value="Selesai">Selesai</option>
+						<?php } ?>
 					</select>
 					<small class="text-danger"><?= form_error('resi') ?></small>
 					<input type="hidden" name="id" value="<?= $invoice['id_invoice'] ?>">
