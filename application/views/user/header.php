@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- favicon -->
+  <link rel="icon" href="<?= base_url('assets/favicon.ico') ?>">
   <!-- Bootstrap -->
   <link href="<?= base_url('vendor/sb-admin-2/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<?= base_url(); ?>vendor/bootstrap/css/bootstrap.css">

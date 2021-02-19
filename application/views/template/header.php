@@ -8,11 +8,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="<?= base_url('admin_assets/img/favicon_admin.ico') ?>" />
 
 	<title>
-		<?php if($this->uri->segment(2)==NULL) {
+		<?php if ($this->uri->segment(2) == NULL) {
 			echo $info['judul_web'] . ' Admin';
-		} else { echo $judul . ' | Admin'; } ?>
+		} else {
+			echo $judul . ' | Admin';
+		} ?>
 	</title>
 
 	<!-- Custom fonts for this template-->
@@ -23,7 +27,7 @@
 	<link href="<?= base_url('vendor/sb-admin-2/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
 	<!-- Custom styles for this page -->
-  	<link href="<?= base_url('vendor/sb-admin-2/'); ?>vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+	<link href="<?= base_url('vendor/sb-admin-2/'); ?>vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
 </head>
 
@@ -52,7 +56,9 @@
 			</div>
 
 			<!-- Nav Item - Dashboard -->
-			<li class="nav-item <?php if($this->uri->segment(2) == null) { echo 'active'; } ?>">
+			<li class="nav-item <?php if ($this->uri->segment(2) == null) {
+									echo 'active';
+								} ?>">
 				<a class="nav-link" href="<?= base_url('admin'); ?>">
 					<i class="fas fa-fw fa-house-user"></i>
 					<span>Dashboard</span></a>
@@ -67,48 +73,62 @@
 			</div>
 
 			<!-- Nav Item - Produk -->
-			<li class="nav-item <?php if($this->uri->segment(2) == 'produk') { echo 'active'; } ?>">
+			<li class="nav-item <?php if ($this->uri->segment(2) == 'produk') {
+									echo 'active';
+								} ?>">
 				<a class="nav-link" href="<?= base_url('admin/produk'); ?>">
 					<i class="fas fa-fw fa-archive"></i>
 					<span>Produk</span></a>
 			</li>
 			<!-- Nav Item - Kategori -->
-			<li class="nav-item <?php if($this->uri->segment(2) == 'kategori') { echo 'active'; } ?>">
+			<li class="nav-item <?php if ($this->uri->segment(2) == 'kategori') {
+									echo 'active';
+								} ?>">
 				<a class="nav-link" href="<?= base_url('admin/kategori'); ?>">
 					<i class="fas fa-fw fa-tag"></i>
 					<span>Kategori</span></a>
 			</li>
 
 			<!-- Nav Item - Banner -->
-			<li class="nav-item <?php if($this->uri->segment(2) == 'banner') { echo 'active'; } ?>">
+			<li class="nav-item <?php if ($this->uri->segment(2) == 'banner') {
+									echo 'active';
+								} ?>">
 				<a class="nav-link" href="<?= base_url('admin/banner'); ?>">
 					<i class="fas fa-fw fa-images"></i>
 					<span>Banner</span></a>
 			</li>
 
 			<!-- Nav Item - Invoice -->
-			<li class="nav-item <?php if($this->uri->segment(2) == 'invoice') { echo 'active'; } ?>">
+			<li class="nav-item <?php if ($this->uri->segment(2) == 'invoice') {
+									echo 'active';
+								} ?>">
 				<a class="nav-link" href="<?= base_url('admin/invoice'); ?>">
 					<i class="far fa-fw fa-file-alt"></i>
 					<span>Invoice</span></a>
 			</li>
 
 			<!-- Nav Item - Info -->
-			<li class="nav-item <?php if($this->uri->segment(2) == 'info') { echo 'active'; } ?>">
+			<li class="nav-item <?php if ($this->uri->segment(2) == 'info') {
+									echo 'active';
+								} ?>">
 				<a class="nav-link" href="<?= base_url('admin/info'); ?>">
 					<i class="fas fa-fw fa-info-circle"></i>
 					<span>Info</span></a>
 			</li>
 
 			<!-- Nav Item - User -->
-			<li class="nav-item <?php if($this->uri->segment(2) == 'users') { echo 'active'; } ?>">
+			<li class="nav-item <?php if ($this->uri->segment(2) == 'users') {
+									echo 'active';
+								} ?>">
 				<a class="nav-link" href="<?= base_url('admin/users'); ?>">
 					<i class="fas fa-fw fa-user"></i>
 					<span>User</span></a>
 			</li>
 
 			<!-- Nav Item - Pages Collapse Menu -->
-			<!-- <li class="nav-item <?php if($this->uri->segment(2) == 'users') { echo 'active'; } ?>">
+			<!-- <li class="nav-item <?php if ($this->uri->segment(2) == 'users') {
+											echo 'active';
+										} ?>">
 				<a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
 					<i class="fas fa-fw fa-user-cog"></i>
 					<span>User</span>
@@ -170,5 +190,3 @@
 
 				</nav>
 				<!-- End of Topbar -->
-
-				
