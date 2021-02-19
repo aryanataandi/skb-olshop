@@ -96,6 +96,7 @@ class Produk_model extends CI_Model
 	{
 		$data['keyword'] = $this->input->post('keyword', true);
 		$this->db->like('nama_produk', $data['keyword']);
+		$this->db->where('status_produk', 1);
 		return $this->db->get('tb_produk')->result_array();
 	}
 
@@ -139,6 +140,7 @@ class Produk_model extends CI_Model
 		$this->db->from('tb_produk as a');
 		$this->db->join('tb_kategori as b', 'a.id_kategori = b.id_kategori', 'left');
 		$this->db->where('b.nama_kategori', ucwords(str_replace("-", " ", $kategori)));
+		$this->db->where('status_produk', 1);
 		$query = $this->db->get();
 
 		return $query->result_array();
