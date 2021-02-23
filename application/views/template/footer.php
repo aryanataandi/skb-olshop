@@ -3,7 +3,7 @@
         <footer class="sticky-footer bg-light">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright © Aryanata Andipradana 2021</span>
+                    <span>Copyright © Aryanata Andipradana <?= date('Y') ?></span>
                 </div>
             </div>
         </footer>
