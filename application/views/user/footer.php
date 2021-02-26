@@ -89,7 +89,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
     <div class="footer-c text-center text-light py-4">
-        <small>Copyright &copy; 2021 - Aryanata Andipradana</small>
+        <small>Copyright &copy; <?= date('Y') ?> - Aryanata Andipradana</small>
     </div>
 </footer>
 
