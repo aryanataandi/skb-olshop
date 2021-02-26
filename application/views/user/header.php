@@ -42,7 +42,7 @@
   <nav class="navbar navbar-main navbar-expand-lg navbar-light shadow fixed-top">
     <div class="container">
       <div class="text-truncate">
-        <a class="navbar-brand brand" href="<?= base_url(); ?>"><?= $info['judul_web'] ?></a>
+        <a href="<?= base_url(); ?>"><img class="logo" src="<?= base_url('assets/logo.png') ?>" alt="<?= $info['judul_web'] ?>"></a>
       </div>
       <!-- Experimental -->
       <div class="dropdown cart mobile float-right">

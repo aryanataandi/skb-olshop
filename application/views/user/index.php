@@ -21,7 +21,7 @@
           <div class="carousel-item">
           <?php }
         $a++; ?>
-          <a href="http://<?= $banner['url'] ?>">
+          <a href="<?= $banner['url'] ?>">
             <img src="<?= base_url(); ?>assets/img_banner/<?= $banner['gambar_banner'] ?>" class="d-block w-100" alt="<?= $banner['nama_banner'] ?>">
           </a>
           </div>
@@ -37,8 +37,7 @@
         </a>
   </div>
 
-  <div class="container">
-
+  <div class=" container">
     <div class="wrapper shadow card my-5">
       <h5 class="card-header terbaru text-white py-3">Produk Terbaru</h5>
       <div class="card-body">
@@ -74,12 +73,12 @@
   </div>
 
   <?php if (count($diskon) >= 6) { ?>
-    <section data-aos="fade-up" data-aos-duration="400" class="bg-warning pt-1">
+    <section data-aos="fade-up" data-aos-duration="400" class="diskon pt-1">
       <div class="container my-5">
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-4">
-              <div class="text-light text-center text-body text-md-left mb-5 pt-4">
+              <div class="text-reset text-center text-md-left mb-5 pt-4">
                 <h2><b>Yang Lagi Promo!</b></h2>
                 <p class="h4 font-weight-lighter">Diskon hingga<br><span class="font-weight-bold" style="font-size: 4.6em;"><?php echo $max_diskon['diskon_produk'] ?><span style="font-size: .6em;">%</span></span></p>
               </div>
