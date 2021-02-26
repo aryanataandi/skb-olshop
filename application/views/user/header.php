@@ -66,7 +66,7 @@
 
                   <a href="<?= base_url('home/detail/' . strtourl($produk['nama_produk'])) ?>" class="dropdown-item py-3 text-truncate">
                     <b><?= $produk['nama_produk'] ?></b>
-                    <span class="font-weight-bold" style="color: orangered;"><br><?= getRupiah($item['price']) ?></span><small> ( <?= $item['qty'] ?> barang )</small>
+                    <span class="font-weight-bold" style="color: orangered;"><br>@<?= getRupiah($item['price']) ?></span><small> ( <?= $item['qty'] ?> barang )</small>
                   </a>
             <?php }
               }
@@ -139,7 +139,7 @@
                   if ($produk['id_produk'] == $item['id']) { ?>
                     <a href="<?= base_url('home/detail/' . strtourl($produk['nama_produk'])) ?>" class="dropdown-item py-3 text-truncate">
                       <b><?= $produk['nama_produk'] ?></b>
-                      <span class="font-weight-bold" style="color: orangered;"><br><?= getRupiah($item['price']) ?></span><small> ( <?= $item['qty'] ?> barang )</small>
+                      <span class="font-weight-bold" style="color: orangered;"><br>@<?= getRupiah($item['price']) ?></span><small> ( <?= $item['qty'] ?> barang )</small>
                     </a>
               <?php }
                 }

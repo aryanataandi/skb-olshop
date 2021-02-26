@@ -35,7 +35,7 @@
 										<div class="mb-5">
 											<img src="<?= base_url('assets/img_produk/' . $produk['gambar_produk']) ?>" alt="produk" class="rounded float-left mr-3" height="120px">
 											<h5><a href="<?= base_url('home/detail/' . strtourl($produk['nama_produk'])) ?>" style="font-size: .96em;"><?= $produk['nama_produk'] ?></a></h5>
-											<h5><?= getRupiah($item['price']) ?></h5>
+											<h5>@<?= getRupiah($item['price']) ?></h5>
 											<p class="text-muted small">Jumlah : <?= $item['qty'] ?> / Berat <?= $produk['berat_produk'] * $item['qty'] ?> Kg</p>
 											<a href="<?= base_url('home/delitem/' . $item['rowid']) ?>"><i class="fas fa-trash float-right text-secondary"></i></a>
 										</div>

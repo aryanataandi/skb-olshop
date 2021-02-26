@@ -41,19 +41,33 @@
 								<h3 class="font-weight-bold "><u><?= $pesanan['resi'] ?></u></h3>
 							</div>
 						</div>
-					<?php }
+						<?php }
 					foreach ($item as $item) {
-					?>
-						<div class="mb-4">
-							<div class="mb-5">
-								<img src="<?= base_url('assets/img_produk/' . $item['gambar_produk']) ?>" alt="<?= $item['nama_produk'] ?>" class="rounded float-left mr-3" height="120px">
-								<h5><a href="<?= base_url('home/detail/' . strtourl($item['nama_produk'])) ?>" style="font-size: .96em;"><?= $item['nama_produk'] ?></a></h5>
-								<h5><?= getRupiah($item['harga_produk'] - ($item['diskon_produk'] / 100) * $item['harga_produk']) ?></h5>
-								<p class="text-muted">Jumlah : <?= $item['jumlah'] ?></p>
+						if (!$item['nama_produk']) {
+						?>
+							<div class="mb-4">
+								<div class="mb-4 d-flex">
+									<div style="background-color: #c2c2c2; width: 120px; height: 120px;" class="rounded float-left d-flex mr-3"></div>
+									<div>
+										<h5 class="text-danger"><em>Produk tidak tersedia</em></h5>
+										<h5><?= getRupiah($item['harga_detail']) ?></h5>
+										<p class="text-muted">Jumlah : <?= $item['jumlah'] ?></p>
+									</div>
+								</div>
+								<hr>
 							</div>
-							<hr>
-						</div>
+						<?php } else { ?>
+							<div class="mb-4">
+								<div class="mb-5">
+									<img src="<?= base_url('assets/img_produk/' . $item['gambar_produk']) ?>" alt="<?= $item['nama_produk'] ?>" class="rounded float-left mr-3" height="120px">
+									<h5><a href="<?= base_url('home/detail/' . strtourl($item['nama_produk'])) ?>" style="font-size: .96em;"><?= $item['nama_produk'] ?></a></h5>
+									<h5><?= getRupiah($item['harga_detail']) ?></h5>
+									<p class="text-muted">Jumlah : <?= $item['jumlah'] ?></p>
+								</div>
+								<hr>
+							</div>
 					<?php
+						}
 					}
 					?>
 
@@ -134,7 +148,7 @@
 									Total Harga
 								</div>
 								<div class="col-6 my-1">
-									<?= getRupiah($pesanan['total'] - $pesanan['ongkir']) ?>
+									<?= getRupiah($pesanan['bayar']) ?>
 								</div>
 								<div class="col-6 my-1">
 									Total Ongkir (<?= $pesanan['berat_total'] ?> kg)

@@ -26,6 +26,7 @@ class Invoice_model extends CI_Model
 			"kode_pos" => htmlspecialchars($this->input->post('kode_pos')),
 			"ekspedisi" => $this->input->post('ekspedisi'),
 			"resi" => "-",
+			"bayar" => $this->input->post('total') - $this->input->post('ongkir'),
 			"ongkir" => $this->input->post('ongkir'),
 			"berat_total" => $this->input->post('berat'),
 			"total" => $this->input->post('total'),
@@ -39,7 +40,8 @@ class Invoice_model extends CI_Model
 			$dataDetail[] = [
 				"id_invoice" => $kode,
 				"id_produk" => $item['id'],
-				"jumlah" => $item['qty']
+				"jumlah" => $item['qty'],
+				"harga_detail" => $item['price'] * $item['qty']
 			];
 		}
 

@@ -116,15 +116,25 @@
 					</thead>
 					<tbody>
 						<?php $i = 1;
-						foreach ($invoice_detail as $item) { ?>
-							<tr>
-								<td><?= $i ?></td>
-								<td class="text-truncate"><a class="text-secondary" href="<?= base_url('home/detail/' . strtourl($item['nama_produk'])) ?>"><u><?= $item['nama_produk'] ?></u></a></td>
-								<td><?= $item['jumlah'] ?></td>
-								<td align="right"><?= getRupiah($harga = $item['harga_produk'] - ($item['diskon_produk'] / 100) * $item['harga_produk']) ?></td>
-								<td align="right"><?= getRupiah($subtotal = $harga * $item['jumlah']) ?></td>
-							</tr>
+						foreach ($invoice_detail as $item) {
+							if (!$item['nama_produk']) { ?>
+								<tr>
+									<td><?= $i ?></td>
+									<td class="text-truncate"><span class="text-danger"><em>Produk ini tidak tersedia</em></span></td>
+									<td><?= $item['jumlah'] ?></td>
+									<td align="right"><?= getRupiah($item['harga_detail'] / $item['jumlah']) ?></td>
+									<td align="right"><?= getRupiah($item['harga_detail']) ?></td>
+								</tr>
+							<?php } else { ?>
+								<tr>
+									<td><?= $i ?></td>
+									<td class="text-truncate"><a class="text-secondary" href="<?= base_url('home/detail/' . strtourl($item['nama_produk'])) ?>"><u><?= $item['nama_produk'] ?></u></a></td>
+									<td><?= $item['jumlah'] ?></td>
+									<td align="right"><?= getRupiah($item['harga_produk']) ?></td>
+									<td align="right"><?= getRupiah($item['harga_detail']) ?></td>
+								</tr>
 						<?php $i++;
+							}
 						} ?>
 						<tr>
 							<td></td>
@@ -132,12 +142,7 @@
 								Total
 							</td>
 							<td align="right" class="font-weight-bold">
-								<?php $total = 0;
-								foreach ($invoice_detail as $item) {
-									$harga = $item['harga_produk'] - ($item['diskon_produk'] / 100) * $item['harga_produk'];
-									$total += $harga * $item['jumlah'];
-								}
-								echo getRupiah($total); ?>
+								<?= getRupiah($item['bayar']); ?>
 							</td>
 						</tr>
 						<tr>
